@@ -9,37 +9,47 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #0a0f1f, #0f1c2e);
+    background: linear-gradient(180deg, #0a0f1f, #07111f);
     color: white;
     text-align: center;
 }
 
+/* ===== Header ===== */
 header {
-    padding: 30px;
+    padding: 40px 20px;
     background: #0d1b2a;
-    box-shadow: 0 0 20px #00bfff;
+    box-shadow: 0 0 25px #00bfff;
 }
 
 .logo {
     width: 180px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #00bfff;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00bfff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #00bfff; }
+    to { box-shadow: 0 0 40px #00bfff; }
 }
 
 h1 {
     color: #00bfff;
-    font-size: 40px;
+    font-size: 42px;
+    margin-top: 15px;
 }
 
+/* ===== IP Box ===== */
 .ip-box {
     margin-top: 20px;
     background: #001f3f;
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 10px;
     display: inline-block;
-    box-shadow: 0 0 10px #00bfff;
+    box-shadow: 0 0 15px #00bfff;
 }
 
+/* ===== Buttons ===== */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -50,32 +60,49 @@ h1 {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* ===== Sections ===== */
 .section {
     padding: 60px 20px;
 }
 
 .card {
     background: rgba(255,255,255,0.05);
-    padding: 25px;
+    padding: 30px;
     margin: 20px auto;
     width: 85%;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,191,255,0.3);
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,191,255,0.3);
 }
 
+/* ===== Form ===== */
 input, textarea, select {
     width: 90%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
     border: none;
+    outline: none;
+    font-size: 14px;
 }
 
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* ===== Footer ===== */
 footer {
     padding: 20px;
     background: #0d1b2a;
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -83,7 +110,8 @@ footer {
 <body>
 
 <header>
-    <img src="https://cdn.discordapp.com/attachments/1461797385557508288/1474504963282436358/7afb93643be699e0.gif?ex=699c1182&is=699ac002&hm=fa5f24506c3d83c517d2d9676e824d81dd24ce01616ba343aa5ea1c52f820948&" class="logo">
+    <!-- مهم: حط ملف logo.gif بنفس مجلد الموقع -->
+    <img src="logo.gif" class="logo">
     <h1>RWL | POLICE MOD</h1>
 
     <div class="ip-box">
@@ -149,7 +177,7 @@ footer {
 </footer>
 
 <script>
-const webhookURL = "PUT_NEW_WEBHOOK_HERE";
+const webhookURL = "https://canary.discord.com/api/webhooks/1475057725242085501/aDrKQqpX9An8SHXrABoPhc7O1y0-qJm509UcxuPek4Br4Y28imOTVHfYkanzP8vCrWXd";
 
 function copyIP() {
     var ipText = document.getElementById("serverIP").innerText;
@@ -199,4 +227,3 @@ function submitForm(event) {
 
 </body>
 </html>
-
