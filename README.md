@@ -83,7 +83,7 @@ footer {
 <body>
 
 <header>
-    <img src="https://cdn.discordapp.com/attachments/1461797385557508288/1474504963282436358/7afb93643be699e0.gif" class="logo">
+   <img class="logo" src="./logo.gif" alt="لوغو RWL | POLICE MOD">
     <h1>RWL | POLICE MOD</h1>
 
     <div class="ip-box">
